@@ -2,6 +2,9 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    {{$store.state.isAuthenticated}}
+    {{$store.state.isUser.name}}
+{{categories}}
   </div>
 </template>
 
@@ -11,8 +14,22 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'HomeView',
+  data(){
+    return {
+      categories: [],
+    }
+  },
+  async mounted(){
+    await this.axios.get("/categories")
+        .then((res) => {
+          const {categories} = res.data;
+          console.log(res.data)
+          this.categories = categories;
+        })
+        .catch((err) => console.log(err));
+  },
   components: {
     HelloWorld
+  },
   }
-}
 </script>
