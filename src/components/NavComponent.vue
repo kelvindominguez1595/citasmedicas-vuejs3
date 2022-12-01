@@ -1,7 +1,7 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-light">
+  <nav class="navbar navbar-expand-lg bg-light mb-3">
     <div class="container-fluid">
-      <router-link to="/home" class="navbar-brand" >Navbar</router-link>
+      <router-link to="/home" class="navbar-brand" >{{$store.state.isUser.name}} {{$store.state.isUser.lastname}}</router-link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -18,9 +18,9 @@
               Reservaciones
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Crear</a></li>
-              <li><a class="dropdown-item" href="#">Ver reservaciones</a></li>
-              <li><a class="dropdown-item" href="#">Ver Calendario</a></li>
+              <li><router-link class="dropdown-item" to="/crearreservacion">Crear</router-link></li>
+              <li><router-link class="dropdown-item" to="/reservaciones">Ver reservaciones</router-link></li>
+              <li><router-link class="dropdown-item" to="/calendarreservations">Ver Calendario</router-link></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -37,8 +37,8 @@
               Configuraciones
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Categorias</a></li>
-              <li><a class="dropdown-item" href="#">Generos</a></li>
+              <li><router-link class="dropdown-item" to="/categorias">Categorias</router-link></li>
+              <li><router-link class="dropdown-item" to="/generos">Generos</router-link></li>
               <li><a class="dropdown-item" href="#">Estado Pago</a></li>
             </ul>
           </li>

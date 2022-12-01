@@ -1,10 +1,11 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    {{$store.state.isAuthenticated}}
-    {{$store.state.isUser.name}}
-{{categories}}
+  <div class="container ">
+    <div class="row d-flex justify-content-center">
+      <img class="img-fluid" alt="ULS logo" src="../assets/logo.jpg" style="width: 300px; height: 130px">
+    </div>
+    <div class="row">
+      <HelloWorld msg="Welcome to Your Vue.js App"/>
+    </div>
   </div>
 </template>
 
