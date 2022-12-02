@@ -1,6 +1,11 @@
 <template>
   <div class="hello text-center">
     <h1 class="fw-bold">Sistema de Citas Medicas</h1>
+    <ul class="list-group list-group-flush">
+      <li class="fs-3 fw-bold">Node JS</li>
+      <li class="fs-3 fw-bold">MongoDB</li>
+      <li class="fs-3 fw-bold">Vue JS 3</li>
+    </ul>
   </div>
 </template>
 
