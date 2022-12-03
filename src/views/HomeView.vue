@@ -4,7 +4,7 @@
       <img class="img-fluid" alt="ULS logo" src="../assets/logo.jpg" style="width: 300px; height: 130px">
     </div>
     <div class="row">
-      <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <HelloWorld msg=""/>
     </div>
   </div>
 </template>

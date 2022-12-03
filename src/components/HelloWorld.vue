@@ -5,6 +5,7 @@
       <li class="fs-3 fw-bold">Node JS</li>
       <li class="fs-3 fw-bold">MongoDB</li>
       <li class="fs-3 fw-bold">Vue JS 3</li>
+      <li class="fs-3 fw-bold">Bootstrap 5.2</li>
     </ul>
   </div>
 </template>

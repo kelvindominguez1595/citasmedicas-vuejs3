@@ -1,33 +1,36 @@
 <template>
-<div class="row mt-3 d-flex justify-content-center">
-  <div class="col-3 col-md-3 col-lg-3 col-xl-3">
-    <div class="card">
-      <div class="card-header bg-primary text-white">
-        Inicio de Sesión
-      </div>
-      <div class="card-body">
-        <form type="post"  class="row g-3" @submit.prevent="loginUser">
-          <div class="col-12">
-            <label>Correo electronico</label>
-            <input type="text" class="form-control" placeholder="email" v-model="email" required />
+  <div class="container" >
+    <div class="row vh-100 justify-content-center align-items-center ">
+      <div class="col-12  col-sm-12 col-md-12 col-lg-4 col-xl-4">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            Inicio de Sesión
           </div>
-          <div class="col-12">
-            <label>Contraseña:</label>
-            <input type="password" class="form-control" placeholder="contraseña" v-model="password" required />
-          </div>
+          <div class="card-body">
+            <form type="post"  class="row g-3" @submit.prevent="loginUser">
+              <div class="col-12">
+                <label>Correo electronico</label>
+                <input type="text" class="form-control" placeholder="email" v-model="email" required />
+              </div>
+              <div class="col-12">
+                <label>Contraseña:</label>
+                <input type="password" class="form-control" placeholder="contraseña" v-model="password" required />
+              </div>
 
-          <div class="col text-center">
-            <div  v-show="loading" class="spinner-border text-primary" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
-          </div>
+              <div class="col text-center">
+                <div  v-show="loading" class="spinner-border text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
 
-          <button v-show="!loading" type="submit" class="btn btn-primary">Iniciar Sesión</button>
-        </form>
+              <button v-show="!loading" type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
 </template>
 
 <script>
